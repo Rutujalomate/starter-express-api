@@ -8,7 +8,9 @@ const userSchema=new mongoose.Schema({
     
      },{
         versionKey:false,
-        timestamps:true
+        timestamps:true,
+     bufferCommands: false,
+  autoCreate: false 
     })
      const User=mongoose.model("user",userSchema)
      module.exports=User
