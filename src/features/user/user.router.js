@@ -9,14 +9,15 @@ app.post("/signup",async(req,res)=>{
     const {name,email,password,age}=req.body
 
     try{
-        let exitingUser=await User.findOne(email)
-        if(exitingUser){
-            res.status(404).send("canot create user with existing email")
-        }else{
+        //let exitingUser=await User.findOne(email)
+        //if(exitingUser){
+          //  res.status(404).send("canot create user with existing email")
+        //}
+    //else{
             let user=await User.create({name,email,password,age})
     console.log(user)
     res.send(`token:${email}_#_${password}`)
-        }
+     //   }
 
     }catch(e){
         res.send(e.message)
