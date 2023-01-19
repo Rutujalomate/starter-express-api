@@ -14,7 +14,9 @@ app.use(cors())
 
 //console.log(POR)
 
-
+app.get("/",(req,res)=>{
+res.send("Heloo")
+})
 
 const userRoute=require("./src/features/user/user.router")
 
